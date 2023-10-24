@@ -1,5 +1,4 @@
 - name: update fulltextrss sites
-  hosts: debian
   become: yes
   ansible.builtin.command:
     cmd: sudo git pull
