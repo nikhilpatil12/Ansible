@@ -2,5 +2,6 @@
   hosts: debian
   become: yes
   ansible.builtin.command:
-    chdir: /home/nikhil/.freshrss/standard/
     cmd: sudo git pull
+  args:
+    chdir: /home/nikhil/.freshrss/standard/
