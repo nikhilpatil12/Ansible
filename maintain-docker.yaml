@@ -2,12 +2,12 @@
 - name: clean docker
   hosts: debian
   tasks:
-    - name: prune non-dangling images
+    - name: prune non-dangling volumes, images and networks
       community.docker.docker_prune:
         containers: false
         images: true
         images_filters:
           dangling: false
-        networks: false
-        volumes: false
+        networks: true
+        volumes: true
         builder_cache: false
