@@ -1,6 +1,6 @@
-- name: reboot machine
+- name: update fulltextrss sites
   hosts: debian
   become: yes
   command:
     chdir: /home/nikhil/.freshrss/standard/
-    cmd: sudo git pull
+    cmd: git pull
