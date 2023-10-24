@@ -1,5 +1,10 @@
-- name: update fulltextrss sites
+---
+- name: Update ftr sites
+  hosts: debian
   become: yes
-  ansible.builtin.command: sudo git pull
-  args:
-    chdir: /home/nikhil/.freshrss/standard/
+  become_user: root
+  tasks:
+    - name: cd and pull
+      command: git pull
+      args:
+        chdir: /home/nikhil/.fulltextrss/standard/
