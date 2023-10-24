@@ -4,6 +4,7 @@
   tasks:
     - name: Update all packages to their latest version
       when: ansible_pkg_mgr == 'apt'
+      become: true
       become_user: root
       apt:
         name: "*"
@@ -11,6 +12,7 @@
 
     - name: Update packages with apt
       when: ansible_pkg_mgr == 'apt'
+      become: true
       become_user: root
       apt:
         update_cache: yes
@@ -23,6 +25,7 @@
 
     - name: Upgrade packages with apt
       when: ansible_pkg_mgr == 'apt'
+      become: true
       become_user: root
       apt:
         upgrade: dist
