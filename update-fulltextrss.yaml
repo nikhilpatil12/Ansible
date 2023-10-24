@@ -1,0 +1,6 @@
+- name: reboot machine
+  hosts: debian
+  become: yes
+  command:
+    chdir: /home/nikhil/.freshrss/standard/
+    cmd: sudo git pull
