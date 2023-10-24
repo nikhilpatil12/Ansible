@@ -1,6 +1,5 @@
 - name: update fulltextrss sites
   become: yes
-  ansible.builtin.command:
-    cmd: sudo git pull
+  ansible.builtin.command: sudo git pull
   args:
     chdir: /home/nikhil/.freshrss/standard/
