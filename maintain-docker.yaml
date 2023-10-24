@@ -1,5 +1,4 @@
 - name: clean docker
-  hosts: "{{ hosts }}"
   tasks:
     - name: prune non-dangling images
       community.docker.docker_prune:

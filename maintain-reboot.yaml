@@ -1,5 +1,4 @@
 - name: reboot machine
-  hosts: "{{ hosts }}"
   become: yes
   tasks:
     - name: reboot machine
