@@ -1,5 +1,5 @@
 - name: reboot machine
-  hosts: "{{ hosts }}"
+  hosts: debian
   become: yes
   tasks:
     - name: reboot machine
