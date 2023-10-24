@@ -2,6 +2,12 @@
 - name: Update and upgrade apt packages
   hosts: all
   tasks:
+    - name: Update all packages to their latest version
+      when: ansible_pkg_mgr == 'apt'
+      apt:
+        name: "*"
+        state: latest
+
     - name: Update packages with apt
       when: ansible_pkg_mgr == 'apt'
       apt:
