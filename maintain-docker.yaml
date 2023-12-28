@@ -1,6 +1,6 @@
 ---
 - name: clean docker
-  hosts: debian
+  hosts: all
   tasks:
     - name: prune non-dangling volumes, images and networks
       community.docker.docker_prune:
