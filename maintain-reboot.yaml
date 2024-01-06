@@ -1,5 +1,5 @@
 - name: reboot machine
-  hosts: debian
+  hosts: all
   become: yes
   tasks:
     - name: reboot machine
