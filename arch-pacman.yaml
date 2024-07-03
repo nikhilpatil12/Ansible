@@ -3,11 +3,6 @@
   hosts: all
   become: yes
   tasks:
-    - name: Ensure python-requests is installed
-      pacman:
-        name: python-requests
-        state: present
-
     - name: Update the package database
       pacman:
         update_cache: yes
