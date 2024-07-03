@@ -1,0 +1,12 @@
+---
+- name: Update and upgrade Arch Linux packages
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update the package database
+      pacman:
+        update_cache: yes
+
+    - name: Upgrade all installed packages
+      pacman:
+        upgrade: yes
