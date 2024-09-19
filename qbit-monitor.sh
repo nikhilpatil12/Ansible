@@ -25,7 +25,7 @@ if [ $? -ne 0 ]; then
     echo "Port check failed, restarting stack..."
 
     STACK_ID=$(get_stack_id)
-    echo "Stack ID: $STACK_ID"
+    echo "Stack ID:$STACK_ID"
 
     if [ -n "$STACK_ID" ]; then
         stop_stack $STACK_ID
