@@ -1,5 +1,4 @@
 #!/bin/bash
-
 ADDRESS="http://debian"
 PORT=8080
 STACK_NAME="pirate"
