@@ -13,11 +13,11 @@ get_stack_id() {
 
 stop_stack() {
     local stack_id=$1
-    curl -s -X POST -H "X-API-Key: $PORTAINER_API_KEY" "$PORTAINER_API_URL/stacks/$stack_id/stop?endpointId=$ENDPOINT_ID"
+    curl -s -X POST -H "X-API-Key:$PORTAINER_API_KEY" "$PORTAINER_API_URL/stacks/$stack_id/stop?endpointId=$ENDPOINT_ID"
 }
 start_stack() {
     local stack_id=$1
-    curl -s -X POST -H "X-API-Key: $PORTAINER_API_KEY" "$PORTAINER_API_URL/stacks/$stack_id/start?endpointId=$ENDPOINT_ID"
+    curl -s -X POST -H "X-API-Key:$PORTAINER_API_KEY" "$PORTAINER_API_URL/stacks/$stack_id/start?endpointId=$ENDPOINT_ID"
 }
 
 (echo > /dev/tcp/$ADDRESS/$PORT) &>/dev/null
