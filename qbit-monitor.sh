@@ -33,7 +33,7 @@ if [ $? -ne 0 ]; then
         start_stack $STACK_ID
         echo "Stack restarted successfully."
     else
-        echo "Error: Could not find stack ID for stack name '$STACK_NAME'"
+        echo "Error:Could not find stack ID for stack name '$STACK_NAME'"
     fi
 else
     echo "Port check successful."
