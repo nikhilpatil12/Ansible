@@ -4,8 +4,8 @@ ADDRESS="http://debian"
 PORT=8080
 STACK_NAME="pirate"
 PORTAINER_API_URL="https://portainer.nikpatil.com/api"
-PORTAINER_API_KEY="ptr_R/qmiWt2G2a8+bdGRVOlhAGk+HDZ5m86mLl40FCtgGc="  # Replace this with your actual API key
-ENDPOINT_ID="2"  # Replace this with your actual endpoint ID
+PORTAINER_API_KEY="ptr_1AE9TKMLYpcN+MIvrbhiFUHBquoTy9euJnBa8n414rE="
+ENDPOINT_ID="2"
 # Function to get the stack ID
 get_stack_id() {
     curl -s -H "X-API-Key:$PORTAINER_API_KEY" "$PORTAINER_API_URL/stacks" | jq -r ".[] | select(.Name==\"$STACK_NAME\").Id"
