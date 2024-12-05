@@ -11,3 +11,4 @@
         networks: true
         volumes: true
         builder_cache: false
+        docker_host: "unix:///var/run/docker.sock"
